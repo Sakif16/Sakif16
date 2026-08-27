@@ -1,15 +1,132 @@
-##  About Me:
-Solving things as they come...
+<!--
+Sakif16 profile README
+Custom animation assets:
+  - assets/boot.gif      = ASCII boot / rain / pile-up / cryptography / reveal
+  - assets/telemetry.gif = ASCII contribution telemetry
+No SVGs or JavaScript are used for the custom animated panels.
+-->
 
+<p align="center">
+  <img src="assets/boot.gif" width="100%" alt="ASCII cyber decryption boot sequence">
+</p>
 
-##  Socials:
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/https://www.linkedin.com/in/sakib-muhtasim-8b8b69293/) 
+<p align="center">
+  <a href="https://www.linkedin.com/in/sakib-muhtasim-8b8b69293/"><img src="https://img.shields.io/badge/LINKEDIN-0F0F0F?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+  <a href="https://github.com/Sakif16"><img src="https://img.shields.io/badge/GITHUB-0F0F0F?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
+</p>
 
-##  Tech Stack:
-![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white) ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white) ![Raspberry Pi](https://img.shields.io/badge/-Raspberry_Pi-C51A4A?style=for-the-badge&logo=Raspberry-Pi) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-##  GitHub Stats:
-![](https://github-readme-stats.shion.dev/api?username=Sakif16&theme=merko&hide_border=true&include_all_commits=true&count_private=true)<br/>
-![](https://streak-stats.demolab.com/?user=Sakif16&theme=merko&hide_border=true)<br/>
-![](https://github-readme-stats.shion.dev/api/top-langs/?username=Sakif16&theme=merko&hide_border=true&include_all_commits=true&count_private=true&layout=compact)
+```text
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ $ whoami                                                                    │
+├──────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  SAKIB MUHTASIM                                                             │
+│  Computer Science & Engineering                                              │
+│                                                                              │
+│  I build web applications, experiment with robotics, and enjoy working      │
+│  close to the system when a problem gets interesting.                       │
+│                                                                              │
+│  focus :: full-stack development • robotics • systems • problem solving      │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+```
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+## `~/projects`
+
+```text
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ $ ls -la ~/projects                                                         │
+├──────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  Khoroch       expense tracker                                              │
+│  Nobojatra     collaborative / real-time web project                        │
+│  Study Buddy   academic productivity project                                │
+│  Moosik        web project                                                  │
+│  Snitch        web project                                                  │
+│  Goal Table    Next.js project                                              │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+```
+
+<a href="https://github.com/Sakif16/nobojatra"><img src="https://github-readme-stats-shion.vercel.app/api/pin/?username=Sakif16&repo=nobojatra&theme=dark&hide_border=true" width="49%" alt="Nobojatra"></a>
+<a href="https://github.com/Sakif16"><img src="https://github-readme-stats-shion.vercel.app/api?username=Sakif16&show_icons=true&hide_border=true&theme=dark&include_all_commits=true&count_private=true" width="49%" alt="GitHub stats"></a>
+
+## `$ github --telemetry`
+
+<p align="center">
+  <img src="assets/telemetry.gif" width="100%" alt="ASCII GitHub contribution telemetry">
+</p>
+
+```text
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ $ git log --oneline --decorate                                              │
+├──────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  build → break → debug → learn → repeat                                     │
+│                                                                              │
+│  contributions are not a scoreboard; they're a trace of things being built. │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+```
+
+## `$ cat ~/.tech-stack`
+
+```text
+LANGUAGES
+  C++          Python          TypeScript
+
+FRONTEND
+  React        Next.js         Tailwind CSS
+
+BACKEND
+  Node.js      Express.js      PHP
+
+DATA
+  MongoDB      MySQL           Prisma
+
+AI / ML
+  TensorFlow   PyTorch         scikit-learn
+
+SYSTEMS / EMBEDDED
+  Arduino      Raspberry Pi    ESP32
+
+PLATFORM / DEVTOOLS
+  Git          GitHub          Render          Cloudflare
+```
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=cpp,python,typescript,react,nextjs,tailwind,nodejs,express,mongodb,mysql,prisma,tensorflow,pytorch,arduino,raspberrypi,git,github" alt="Technology stack">
+</p>
+
+## `$ neofetch`
+
+```text
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                                                                              │
+│  OS        Arch Linux                                                       │
+│  WM        Hyprland                                                         │
+│  SHELL     zsh                                                              │
+│  STATUS    building                                                         │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+```
+
+## `$ stats`
+
+<p align="center">
+  <img src="https://github-readme-stats-shion.vercel.app/api/top-langs/?username=Sakif16&theme=dark&hide_border=true&include_all_commits=true&count_private=true&layout=compact" width="49%" alt="Top languages">
+  <img src="https://streak-stats.demolab.com/?user=Sakif16&theme=dark&hide_border=true" width="49%" alt="GitHub streak">
+</p>
+
+```text
+$ echo "keep building."
+
+          /\_/\
+         ( o.o )
+          > ^ <
+```
+
+<!--
+Telemetry refresh:
+  .github/workflows/telemetry.yml
+-->
