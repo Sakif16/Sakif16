@@ -1,7 +1,7 @@
 ##  About Me:
-Extremely enthusiastic programmer shipping software that solves real world problems. Weaponizing intelligence and solving problems Along the way. Active member of BRACU Shikari (BRAC University's Ethical Hacking Division). 
+Extremely enthusiastic programmer shipping software that solves real world problems. Weaponizing intelligence and solving problems along the way. Active member of BRACU Shikari (BRAC University's Ethical Hacking Division). 
 
-Actively tinkering software implementation in Robotics through embedded systems to be able to step out into the physical world. 
+Vigorously tinkering software implementation in Robotics through embedded systems to be able to step out into the physical world. 
 
 Passionate about harnessing the power of A.I keeping in mind that, A.I may be able to code 100 lines in a blink but it cannot take away the creative solutions, infrastructure design and ideas from a human for a human's touch cannot be compared nor can it be mimicked.
 
