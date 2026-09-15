@@ -3,7 +3,7 @@ Extremely enthusiastic programmer shipping software that solves real world probl
 
 Vigorously tinkering software implementation in Robotics through embedded systems to be able to step out into the physical world. 
 
-Passionate about harnessing the power of A.I keeping in mind that, A.I may be able to code 100 lines in a blink but it cannot take away the creative solutions, infrastructure design and ideas from a human for a human's touch cannot be compared nor can it be mimicked.
+Passionate about leveraging A.I. while recognizing the value of human creativity. A.I. can generate code in seconds, but designing effective infrastructure, finding creative solutions, and turning ideas into meaningful products still require human judgment and perspective.
 
 
 ##  Socials:
