@@ -1,18 +1,72 @@
-## About Me:
-Extremely enthusiastic programmer shipping software that solves real world problems. Weaponizing intelligence and solving problems along the way. Active member of BRACU Shikari (BRAC University's Ethical Hacking Division).
+<!-- ─────────────────────────────────────────────────────────────
+     profile readme · github.com/Sakif16
+     every panel is a hand-built svg in /assets (light + dark) with
+     a transparent ground, so each panel sits flush on github's own
+     background in either theme and nothing renders broken.
+     telemetry-*, activity-*, projects-* and proj-*-* (counts,
+     contribution graph, language bars, star counts) are
+     regenerated from live github data daily by
+     .github/workflows/telemetry.yml — never edit those by hand.
+────────────────────────────────────────────────────────────── -->
 
-Vigorously tinkering software implementation in Robotics through embedded systems to be able to step out into the physical world.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg">
+  <img src="assets/header-dark.svg" width="100%" alt="sakib muhtasim — sakif16">
+</picture>
 
-Passionate about leveraging A.I. while recognizing the value of human creativity. A.I. can generate code in seconds, but designing effective infrastructure, finding creative solutions, and turning ideas into meaningful products still require human judgment and perspective.
+<p align="center">
+  <a href="https://www.linkedin.com/in/sakib-muhtasim-8b8b69293"><img src="https://img.shields.io/badge/LINKEDIN-E63946?style=flat-square&logoColor=000000" alt="linkedin"></a>
+  <a href="https://sakif16.github.io/"><img src="https://img.shields.io/badge/PORTFOLIO-E63946?style=flat-square" alt="portfolio"></a>
+  <a href="https://x.com/braculaaa"><img src="https://img.shields.io/badge/X-E63946?style=flat-square" alt="x"></a>
+  <a href="https://github.com/Sakif16"><img src="https://img.shields.io/badge/GITHUB-E63946?style=flat-square" alt="github"></a>
+</p>
 
-## Additionals:
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/whoami-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/whoami-light.svg">
+  <img src="assets/whoami-dark.svg" width="100%" alt="01 — whoami">
+</picture>
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-2E7D32?style=for-the-badge&logo=googlechrome&logoColor=white)](https://sakif16.github.io/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sakib-muhtasim-8b8b69293)
-[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@braculaaa)
-[![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/braculaaa)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/ecosystem-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/ecosystem-light.svg">
+  <img src="assets/ecosystem-dark.svg" width="100%" alt="02 — system map">
+</picture>
 
-## GitHub Stats:
-![](https://github-readme-stats.shion.dev/api?username=Sakif16&theme=merko&hide_border=true&include_all_commits=true&count_private=true)<br/>
-![](https://streak-stats.demolab.com/?user=Sakif16&theme=merko&hide_border=true)<br/>
-![](https://github-readme-stats.shion.dev/api/top-langs/?username=Sakif16&theme=merko&hide_border=true&include_all_commits=true&count_private=true&layout=compact)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/projects-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/projects-light.svg">
+  <img src="assets/projects-dark.svg" width="100%" alt="03 — projects">
+</picture>
+
+<!-- each card links to its repo · star counts are refreshed live by the telemetry workflow -->
+<!-- add one <a> block per project card; keep width="49%" for a 2-up row, or 32% for 3-up -->
+<p align="center">
+  <a href="https://github.com/Sakif16/nobojatra"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/proj-nobojatra-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/proj-nobojatra-light.svg"><img src="assets/proj-nobojatra-dark.svg" width="49%" alt="nobojatra"></picture></a>
+  <a href="https://github.com/Sakif16/khoroch"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/proj-khoroch-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/proj-khoroch-light.svg"><img src="assets/proj-khoroch-dark.svg" width="49%" alt="khoroch"></picture></a>
+</p>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/telemetry-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/telemetry-light.svg">
+  <img src="assets/telemetry-dark.svg" width="100%" alt="04 — telemetry">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/activity-light.svg">
+  <img src="assets/activity-dark.svg" width="100%" alt="contribution telemetry">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg">
+  <img src="assets/stack-dark.svg" width="100%" alt="06 — stack">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/footer-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/footer-light.svg">
+  <img src="assets/footer-dark.svg" width="100%" alt="status">
+</picture>
