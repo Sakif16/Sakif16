@@ -16,10 +16,10 @@
 </picture>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/sakib-muhtasim-8b8b69293"><img src="https://img.shields.io/badge/LINKEDIN-E63946?style=flat-square&logoColor=000000" alt="linkedin"></a>
-  <a href="https://sakif16.github.io/"><img src="https://img.shields.io/badge/PORTFOLIO-E63946?style=flat-square" alt="portfolio"></a>
-  <a href="https://x.com/braculaaa"><img src="https://img.shields.io/badge/X-E63946?style=flat-square" alt="x"></a>
-  <a href="https://github.com/Sakif16"><img src="https://img.shields.io/badge/GITHUB-E63946?style=flat-square" alt="github"></a>
+  <a href="https://www.linkedin.com/in/sakib-muhtasim-8b8b69293"><img src="https://img.shields.io/badge/LINKEDIN-C1121F?style=flat-square&logoColor=000000" alt="linkedin"></a>
+  <a href="https://sakif16.github.io/"><img src="https://img.shields.io/badge/PORTFOLIO-C1121F?style=flat-square" alt="portfolio"></a>
+  <a href="https://x.com/braculaaa"><img src="https://img.shields.io/badge/X-C1121F?style=flat-square" alt="x"></a>
+  <a href="https://github.com/Sakif16"><img src="https://img.shields.io/badge/GITHUB-C1121F?style=flat-square" alt="github"></a>
 </p>
 
 <picture>
@@ -44,7 +44,7 @@
 <!-- add one <a> block per project card; keep width="49%" for a 2-up row, or 32% for 3-up -->
 <p align="center">
   <a href="https://github.com/Sakif16/nobojatra"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/proj-nobojatra-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/proj-nobojatra-light.svg"><img src="assets/proj-nobojatra-dark.svg" width="49%" alt="nobojatra"></picture></a>
-  <a href="https://github.com/Sakif16/khoroch"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/proj-khoroch-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/proj-khoroch-light.svg"><img src="assets/proj-khoroch-dark.svg" width="49%" alt="khoroch"></picture></a>
+  <a href="https://github.com/Sakif16/snitch"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/proj-snitch-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/proj-snitch-light.svg"><img src="assets/proj-snitch-dark.svg" width="49%" alt="snitch"></picture></a>
 </p>
 
 <picture>

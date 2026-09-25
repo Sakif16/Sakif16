@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 240" width="880" height="240" font-family="ui-monospace,'SFMono-Regular','Cascadia Mono',Menlo,Consolas,'Liberation Mono',monospace">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 180" width="880" height="180" font-family="ui-monospace,'SFMono-Regular','Cascadia Mono',Menlo,Consolas,'Liberation Mono',monospace">
 <defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#C1121F" stop-opacity="0.4"/><stop offset="1" stop-color="#C1121F" stop-opacity="0"/></linearGradient></defs>
 <style>
 .fade{animation:fade .9s ease both}
@@ -14,22 +14,18 @@
 </style>
 <text x="10" y="26" font-size="12" fill="#C1121F" font-weight="600" text-anchor="start" letter-spacing="3" class="fade">04 — telemetry</text><line x1="150.8" y1="21" x2="870" y2="21" stroke="#d0d7de" stroke-width="1"/>
 <text x="30" y="92" font-size="11" fill="#57606a" font-weight="400" text-anchor="start" letter-spacing="2">contributions</text>
-<text x="30" y="128" font-size="30" fill="#0d1117" font-weight="700" text-anchor="start">355+</text>
-<text x="30" y="152" font-size="10" fill="#57606a" font-weight="400" text-anchor="start">since jan 2023</text>
+<text x="30" y="128" font-size="30" fill="#0d1117" font-weight="700" text-anchor="start">244+</text>
+<text x="30" y="152" font-size="10" fill="#57606a" font-weight="400" text-anchor="start">since aug 2020</text>
 <text x="205" y="92" font-size="11" fill="#57606a" font-weight="400" text-anchor="start" letter-spacing="2">repositories</text>
-<text x="205" y="128" font-size="30" fill="#0d1117" font-weight="700" text-anchor="start">16</text>
+<text x="205" y="128" font-size="30" fill="#0d1117" font-weight="700" text-anchor="start">21</text>
 <text x="205" y="152" font-size="10" fill="#57606a" font-weight="400" text-anchor="start">public</text>
 <text x="350" y="92" font-size="11" fill="#57606a" font-weight="400" text-anchor="start" letter-spacing="2">followers</text>
-<text x="350" y="128" font-size="30" fill="#0d1117" font-weight="700" text-anchor="start">11</text>
+<text x="350" y="128" font-size="30" fill="#0d1117" font-weight="700" text-anchor="start">37</text>
 <text x="350" y="152" font-size="10" fill="#57606a" font-weight="400" text-anchor="start">and counting</text>
-<text x="540" y="92" font-size="11" fill="#57606a" font-weight="400" text-anchor="start" letter-spacing="2">activity pulse</text>
-<polyline class="draw" points="540,133.2 565,139.3 589,137.8 614,137.8 638,136.2 663,150 688,134.7 712,137.8 737,98 762,137.8 786,130.1 811,98 835,125.5 860,120.9" fill="none" stroke="#C1121F" stroke-width="1.5"/>
-<circle class="ping" cx="860" cy="120.9" r="6" fill="none" stroke="#C1121F" stroke-width="1"/>
-<circle cx="860" cy="120.9" r="2.5" fill="#C1121F"/>
-<rect class="grow" x="540" y="178" width="263" height="10" fill="#C1121F" opacity="1"/>
-<rect class="grow" x="803" y="178" width="15" height="10" fill="#C1121F" opacity="0.72"/>
-<rect class="grow" x="818" y="178" width="15" height="10" fill="#C1121F" opacity="0.5"/>
-<rect class="grow" x="833" y="178" width="12" height="10" fill="#C1121F" opacity="0.34"/>
-<rect class="grow" x="845" y="178" width="15" height="10" fill="#C1121F" opacity="0.2"/>
-<text x="540" y="210" font-size="10" fill="#57606a" font-weight="400" text-anchor="start">typescript · css · python · html · other</text>
+<text x="540" y="92" font-size="11" fill="#57606a" font-weight="400" text-anchor="start" letter-spacing="2">activity pulse · bst</text>
+<polyline class="draw" points="540,98 593.3,98 593.3,150 713.3,150 713.3,129.2 740,129.2 740,118.8 780,118.8 780,134.4 806.7,134.4 806.7,111 833.3,111 833.3,98 860,98" fill="none" stroke="#C1121F" stroke-width="1.5"/>
+<circle class="ping" cx="860" cy="98" r="6" fill="none" stroke="#C1121F" stroke-width="1"/>
+<circle cx="860" cy="98" r="2.5" fill="#C1121F"/>
+<text x="540" y="164" font-size="9" fill="#57606a" font-weight="400" text-anchor="start">00:01</text>
+<text x="860" y="164" font-size="9" fill="#57606a" font-weight="400" text-anchor="end">24:00</text>
 </svg>

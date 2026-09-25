@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Regenerates the live panels from GitHub data:
-//   assets/telemetry.svg          — counts, activity line, language bars
+//   assets/telemetry.svg          — counts + a fixed daily activity-pulse curve (BST)
 //   assets/activity.svg           — daily contribution graph (last 26 weeks)
 //   assets/projects.svg           — "03 — projects" header strip
 //   assets/proj-<key>.svg         — one clickable card per project
@@ -22,10 +22,12 @@ const PROJECTS = [
     href: "https://github.com/Sakif16/nobojatra",
     d1: "smart travel planning platform",
     d2: "next.js · typescript · mongodb" },
-  { key: "khoroch", title: "khoroch", lang: "typescript", star: "Sakif16/khoroch",
-    href: "https://github.com/Sakif16/khoroch",
-    d1: "family expense tracking, shared & transparent",
-    d2: "next.js · typescript · mongodb" },
+  { key: "snitch", title: "snitch", lang: "typescript", star: "Sakif16/snitch",
+    href: "https://github.com/Sakif16/snitch",
+    // TODO: I couldn't verify this repo's details publicly — fill in the
+    // real one-line description and tech stack below.
+    d1: "TODO — one line describing snitch",
+    d2: "TODO — tech · stack · used" },
   // more from sakif16.github.io/projects.html you could add:
   // { key: "study-buddy", title: "study buddy", lang: "typescript", star: "Sakif16/study-buddy",
   //   href: "https://github.com/Sakif16/study-buddy",
@@ -87,16 +89,7 @@ async function collect() {
     totalContrib += d.user.contributionsCollection.contributionCalendar.totalContributions;
   }
 
-  // rolling ~14-week window for the activity pulse
   const now = new Date();
-  const windowStart = new Date(now.getTime() - 98 * 864e5);
-  const pulseData = await gql(
-    `query($u:String!,$f:DateTime!,$t:DateTime!){user(login:$u){contributionsCollection(from:$f,to:$t){contributionCalendar{weeks{contributionDays{contributionCount}}}}}}`,
-    { u: USER, f: iso(windowStart), t: iso(now) }
-  );
-  const weeks = pulseData.user.contributionsCollection.contributionCalendar.weeks
-    .map((w) => w.contributionDays.reduce((s, d) => s + d.contributionCount, 0))
-    .slice(-14);
 
   // ~26 weeks of daily counts for the contribution graph panel
   const graphStart = new Date(now.getTime() - 182 * 864e5);
@@ -108,59 +101,25 @@ async function collect() {
     .flatMap((w) => w.contributionDays)
     .map((d) => ({ n: d.contributionCount, date: d.date }));
 
-  // language totals across owned, non-fork repos
-  const langData = await gql(
-    `query($u:String!){user(login:$u){repositories(first:100,ownerAffiliations:OWNER,isFork:false){nodes{languages(first:10){edges{size node{name}}}}}}}`,
-    { u: USER }
-  );
-  const langBytes = {};
-  for (const repo of langData.user.repositories.nodes)
-    for (const e of repo.languages.edges)
-      langBytes[e.node.name] = (langBytes[e.node.name] || 0) + e.size;
-
   // star counts for cards that show a star
   const stars = {};
   for (const p of PROJECTS)
     if (p.star) stars[p.key] = (await gh(`/repos/${p.star}`)).stargazers_count;
 
-  return { contributions: totalContrib, repos: profile.public_repos, followers: profile.followers, since: created, weeks, days, langBytes, stars };
+  return { contributions: totalContrib, repos: profile.public_repos, followers: profile.followers, since: created, days, stars };
 }
 
 // ── geometry helpers ────────────────────────────────────────────
 const MONTHS = ["jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"];
 
-function pulse(weeks) {
-  const n = 14;
-  const vals = weeks.length ? weeks.slice() : new Array(n).fill(0);
-  while (vals.length < n) vals.unshift(0);
-  const min = Math.min(...vals), max = Math.max(...vals), span = max - min || 1;
-  const x0 = 540, x1 = 860, yTop = 98, yBot = 150;
-  const pts = vals.map((v, i) => ({
-    x: Math.round(x0 + ((x1 - x0) * i) / (n - 1)),
-    y: Math.round((yBot - ((v - min) / span) * (yBot - yTop)) * 10) / 10,
-  }));
-  const last = pts[pts.length - 1];
-  return { points: pts.map((p) => `${p.x},${p.y}`).join(" "), px: last.x, py: last.y };
-}
-
-function langBars(langBytes, cFg) {
-  const opacities = [1.0, 0.72, 0.5, 0.34, 0.2];
-  const total = Object.values(langBytes).reduce((s, v) => s + v, 0) || 1;
-  const sorted = Object.entries(langBytes).sort((a, b) => b[1] - a[1]);
-  const top = sorted.slice(0, 4).map(([name, v]) => ({ name, v }));
-  top.push({ name: "other", v: sorted.slice(4).reduce((s, [, v]) => s + v, 0) });
-  const X0 = 540, WIDTH = 320;
-  const widths = top.map((s) => Math.round((s.v / total) * WIDTH));
-  if (widths.length) widths[0] += WIDTH - widths.reduce((s, w) => s + w, 0); // absorb rounding
-  let x = X0;
-  const rects = top.map((s, i) => {
-    const w = Math.max(0, widths[i]);
-    const r = `<rect class="grow" x="${x}" y="178" width="${w}" height="10" fill="${cFg}" opacity="${opacities[i] ?? 0.2}"/>`;
-    x += w;
-    return r;
-  }).join("\n");
-  return { rects, label: top.map((s) => s.name.toLowerCase()).join(" · ") };
-}
+// Fixed daily activity-pulse curve (BST, local to the author) — not derived
+// from GitHub data, so it's a constant rather than computed per run.
+//   00:01–04:00 100% · 04:00–13:00 0% · 13:00–15:00 40% · 15:00–18:00 60%
+//   18:00–20:00 30% · 20:00–22:00 75% · 22:00–24:00 100%
+const ACTIVITY_PULSE_POINTS =
+  "540,98 593.3,98 593.3,150 713.3,150 713.3,129.2 740,129.2 740,118.8 " +
+  "780,118.8 780,134.4 806.7,134.4 806.7,111 833.3,111 833.3,98 860,98";
+const ACTIVITY_PULSE_END = { x: 860, y: 98 };
 
 // ── templates ───────────────────────────────────────────────────
 // ── black / red palette ──────────────────────────────────────
@@ -181,7 +140,7 @@ const STYLE = `<style>
 // gaps between panels are indistinguishable from the panels themselves — in
 // both themes. Orange accent carries the identity instead of a painted ground.
 const THEME = {
-  dark:  { fg: "#e6edf3", mut: "#8b949e", line: "#30363d", acc: "#FF4D4D" },
+  dark:  { fg: "#e6edf3", mut: "#8b949e", line: "#30363d", acc: "#C1121F" },
   light: { fg: "#0d1117", mut: "#57606a", line: "#d0d7de", acc: "#C1121F" },
 };
 
@@ -191,7 +150,7 @@ const svgOpen = (h, c, w = 880) =>
 <defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="${c.acc}" stop-opacity="0.4"/><stop offset="1" stop-color="${c.acc}" stop-opacity="0"/></linearGradient></defs>
 ${STYLE}`;
 
-const telemetrySVG = (t) => `${svgOpen(240, t)}
+const telemetrySVG = (t) => `${svgOpen(180, t)}
 <text x="10" y="26" font-size="12" fill="${t.acc}" font-weight="600" text-anchor="start" letter-spacing="3" class="fade">04 — telemetry</text><line x1="150.8" y1="21" x2="870" y2="21" stroke="${t.line}" stroke-width="1"/>
 <text x="30" y="92" font-size="11" fill="${t.mut}" font-weight="400" text-anchor="start" letter-spacing="2">contributions</text>
 <text x="30" y="128" font-size="30" fill="${t.fg}" font-weight="700" text-anchor="start">${t.contrib}</text>
@@ -202,12 +161,12 @@ const telemetrySVG = (t) => `${svgOpen(240, t)}
 <text x="350" y="92" font-size="11" fill="${t.mut}" font-weight="400" text-anchor="start" letter-spacing="2">followers</text>
 <text x="350" y="128" font-size="30" fill="${t.fg}" font-weight="700" text-anchor="start">${t.followers}</text>
 <text x="350" y="152" font-size="10" fill="${t.mut}" font-weight="400" text-anchor="start">and counting</text>
-<text x="540" y="92" font-size="11" fill="${t.mut}" font-weight="400" text-anchor="start" letter-spacing="2">activity pulse</text>
-<polyline class="draw" points="${t.points}" fill="none" stroke="${t.acc}" stroke-width="1.5"/>
-<circle class="ping" cx="${t.px}" cy="${t.py}" r="6" fill="none" stroke="${t.acc}" stroke-width="1"/>
-<circle cx="${t.px}" cy="${t.py}" r="2.5" fill="${t.acc}"/>
-${t.rects}
-<text x="540" y="210" font-size="10" fill="${t.mut}" font-weight="400" text-anchor="start">${t.langs}</text>
+<text x="540" y="92" font-size="11" fill="${t.mut}" font-weight="400" text-anchor="start" letter-spacing="2">activity pulse · bst</text>
+<polyline class="draw" points="${ACTIVITY_PULSE_POINTS}" fill="none" stroke="${t.acc}" stroke-width="1.5"/>
+<circle class="ping" cx="${ACTIVITY_PULSE_END.x}" cy="${ACTIVITY_PULSE_END.y}" r="6" fill="none" stroke="${t.acc}" stroke-width="1"/>
+<circle cx="${ACTIVITY_PULSE_END.x}" cy="${ACTIVITY_PULSE_END.y}" r="2.5" fill="${t.acc}"/>
+<text x="540" y="164" font-size="9" fill="${t.mut}" font-weight="400" text-anchor="start">00:01</text>
+<text x="860" y="164" font-size="9" fill="${t.mut}" font-weight="400" text-anchor="end">24:00</text>
 </svg>
 `;
 
@@ -269,16 +228,14 @@ function graph(days, c) {
 const data = await collect();
 const contrib = `${data.contributions.toLocaleString("en-US")}+`;
 const since = `since ${MONTHS[data.since.getUTCMonth()]} ${data.since.getUTCFullYear()}`;
-const { points, px, py } = pulse(data.weeks);
 
 mkdirSync(ASSETS, { recursive: true });
 
 for (const theme of ["dark", "light"]) {
   const c = THEME[theme];
-  const { rects, label } = langBars(data.langBytes, c.acc);
   const g = graph(data.days, c);
   writeFileSync(resolve(ASSETS, `telemetry-${theme}.svg`),
-    telemetrySVG({ ...c, contrib, repos: data.repos, followers: data.followers, since, points, px, py, rects, langs: label }));
+    telemetrySVG({ ...c, contrib, repos: data.repos, followers: data.followers, since }));
   writeFileSync(resolve(ASSETS, `activity-${theme}.svg`), activitySVG({ ...c, ...g }));
   writeFileSync(resolve(ASSETS, `projects-${theme}.svg`), projHeaderSVG(c));
   for (const p of PROJECTS) {
@@ -289,6 +246,5 @@ for (const theme of ["dark", "light"]) {
 
 console.log(
   `updated: contributions=${contrib} repos=${data.repos} followers=${data.followers} ` +
-    `stars=${JSON.stringify(data.stars)} langs=[${Object.keys(data.langBytes).length}] cards=${PROJECTS.length} ` +
-    `days=${data.days.length}`
+    `stars=${JSON.stringify(data.stars)} cards=${PROJECTS.length} days=${data.days.length}`
 );

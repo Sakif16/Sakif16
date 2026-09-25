@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 170" width="880" height="170" font-family="ui-monospace,'SFMono-Regular','Cascadia Mono',Menlo,Consolas,'Liberation Mono',monospace">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 195" width="880" height="195" font-family="ui-monospace,'SFMono-Regular','Cascadia Mono',Menlo,Consolas,'Liberation Mono',monospace">
 <defs><linearGradient id="acc" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#FF4D4D"/><stop offset="1" stop-color="#7A0C0C"/></linearGradient></defs>
 <style>
 .fade{animation:fade .9s ease both}
@@ -14,9 +14,10 @@
 </style>
 <path d="M14 34 L14 14 L34 14" fill="none" stroke="#C1121F" stroke-width="1.5"/>
 <path d="M866 34 L866 14 L846 14" fill="none" stroke="#C1121F" stroke-width="1.5"/>
-<path d="M14 136 L14 156 L34 156" fill="none" stroke="#C1121F" stroke-width="1.5"/>
-<path d="M866 136 L866 156 L846 156" fill="none" stroke="#C1121F" stroke-width="1.5"/>
+<path d="M14 161 L14 181 L34 181" fill="none" stroke="#C1121F" stroke-width="1.5"/>
+<path d="M866 161 L866 181 L846 181" fill="none" stroke="#C1121F" stroke-width="1.5"/>
 <text x="440" y="86" font-size="42" fill="#0d1117" font-weight="700" text-anchor="middle" letter-spacing="8" class="fade">sakib muhtasim</text>
 <rect class="grow" x="270" y="102" width="340" height="3" fill="url(#acc)"/>
 <text x="440" y="132" font-size="13" fill="#57606a" font-weight="400" text-anchor="middle" letter-spacing="3" class="fade">sakif16 — devops · machine learning · full-stack</text>
+<text x="440" y="152" font-size="13" fill="#57606a" font-weight="400" text-anchor="middle" letter-spacing="3" class="fade">system design · cyber security</text>
 </svg>
