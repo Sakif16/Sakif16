@@ -11,8 +11,8 @@
 @keyframes draw{from{stroke-dashoffset:700}to{stroke-dashoffset:0}}
 .grow{transform-box:fill-box;transform-origin:left;animation:grow 1.4s ease both .4s}
 @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-.webDraw{stroke-dasharray:280;animation:webDraw 1.8s ease both .8s}
-@keyframes webDraw{from{stroke-dashoffset:280}to{stroke-dashoffset:0}}
+.webDraw{stroke-dasharray:420;animation:webDraw 1.8s ease both .8s}
+@keyframes webDraw{from{stroke-dashoffset:420}to{stroke-dashoffset:0}}
 .webFill{animation:webFill 1.8s ease both .8s}
 @keyframes webFill{from{opacity:0}to{opacity:1}}
 </style>
@@ -23,14 +23,14 @@
 <line x1="440" y1="320" x2="440" y2="466" stroke="#d0d7de" stroke-width="1" stroke-dasharray="3 5"/>
 <line x1="401.9" y1="298" x2="275.5" y2="371" stroke="#d0d7de" stroke-width="1" stroke-dasharray="3 5"/>
 <line x1="401.9" y1="254" x2="275.5" y2="181" stroke="#d0d7de" stroke-width="1" stroke-dasharray="3 5"/>
-<polygon class="webFill" points="440,256 492,246 483.3,301 440,331 418.3,288.5 405.4,256" fill="#C1121F" fill-opacity="0.13" stroke="none"/>
-<polygon class="webDraw" points="440,256 492,246 483.3,301 440,331 418.3,288.5 405.4,256" fill="none" stroke="#C1121F" stroke-width="2" stroke-linejoin="round"/>
-<circle cx="440" cy="256" r="3" fill="#C1121F"/>
-<circle cx="492" cy="246" r="3" fill="#C1121F"/>
-<circle cx="483.3" cy="301" r="3" fill="#C1121F"/>
-<circle cx="440" cy="331" r="3" fill="#C1121F"/>
-<circle cx="418.3" cy="288.5" r="3" fill="#C1121F"/>
-<circle cx="405.4" cy="256" r="3" fill="#C1121F"/>
+<polygon class="webFill" points="440,246 517.9,231 505,313.5 440,358.5 407.5,294.8 388,246" fill="#C1121F" fill-opacity="0.13" stroke="none"/>
+<polygon class="webDraw" points="440,246 517.9,231 505,313.5 440,358.5 407.5,294.8 388,246" fill="none" stroke="#C1121F" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="440" cy="246" r="3" fill="#C1121F"/>
+<circle cx="517.9" cy="231" r="3" fill="#C1121F"/>
+<circle cx="505" cy="313.5" r="3" fill="#C1121F"/>
+<circle cx="440" cy="358.5" r="3" fill="#C1121F"/>
+<circle cx="407.5" cy="294.8" r="3" fill="#C1121F"/>
+<circle cx="388" cy="246" r="3" fill="#C1121F"/>
 <circle cx="440" cy="86" r="3.5" fill="#C1121F"/>
 <text x="440" y="72" font-size="14" fill="#0d1117" font-weight="600" text-anchor="middle">cloud</text>
 <text x="440" y="110" font-size="11" fill="#57606a" font-weight="400" text-anchor="middle">docker · ci/cd</text>
@@ -49,7 +49,7 @@
 <circle cx="275.5" cy="181" r="3.5" fill="#C1121F"/>
 <text x="275.5" y="167" font-size="14" fill="#0d1117" font-weight="600" text-anchor="middle">ai</text>
 <text x="275.5" y="205" font-size="11" fill="#57606a" font-weight="400" text-anchor="middle">yolo26 · computer vision</text>
-<circle class="ping" cx="440" cy="276" r="34" fill="none" stroke="#C1121F" stroke-width="1"/>
-<rect x="370" y="257" width="140" height="38" rx="7" fill="none" stroke="#C1121F" stroke-width="1.5"/>
-<text x="440" y="281" font-size="14" fill="#0d1117" font-weight="700" text-anchor="middle" letter-spacing="1">sakif16</text>
+<circle class="ping" cx="440" cy="276" r="26" fill="none" stroke="#C1121F" stroke-width="1"/>
+<rect x="385" y="261" width="110" height="30" rx="6" fill="none" stroke="#C1121F" stroke-width="1.5"/>
+<text x="440" y="280" font-size="12" fill="#0d1117" font-weight="700" text-anchor="middle" letter-spacing="1">sakif16</text>
 </svg>
