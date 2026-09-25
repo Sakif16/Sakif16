@@ -114,12 +114,26 @@ const MONTHS = ["jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov
 
 // Fixed daily activity-pulse curve (BST, local to the author) — not derived
 // from GitHub data, so it's a constant rather than computed per run.
+// Plateaus hold each level; short 1hr ramps (not vertical jumps) carry the
+// curve between them so the rises/falls read as gradual, not stepped:
 //   00:01–04:00 100% · 04:00–13:00 0% · 13:00–15:00 40% · 15:00–18:00 60%
 //   18:00–20:00 30% · 20:00–22:00 75% · 22:00–24:00 100%
 const ACTIVITY_PULSE_POINTS =
-  "540,98 593.3,98 593.3,150 713.3,150 713.3,129.2 740,129.2 740,118.8 " +
-  "780,118.8 780,134.4 806.7,134.4 806.7,111 833.3,111 833.3,98 860,98";
+  "540,98 586.7,98 600,150 706.7,150 720,129.2 733.3,129.2 746.7,118.8 " +
+  "773.3,118.8 786.7,134.4 800,134.4 813.3,111 826.7,111 840,98 860,98";
 const ACTIVITY_PULSE_END = { x: 860, y: 98 };
+// x-axis tick labels, every 3 hours, small so 9 labels don't crowd the row.
+const ACTIVITY_PULSE_TICKS = [
+  { x: 540, label: "00:01", anchor: "start" },
+  { x: 580, label: "03:00", anchor: "middle" },
+  { x: 620, label: "06:00", anchor: "middle" },
+  { x: 660, label: "09:00", anchor: "middle" },
+  { x: 700, label: "12:00", anchor: "middle" },
+  { x: 740, label: "15:00", anchor: "middle" },
+  { x: 780, label: "18:00", anchor: "middle" },
+  { x: 820, label: "21:00", anchor: "middle" },
+  { x: 860, label: "24:00", anchor: "end" },
+];
 
 // ── templates ───────────────────────────────────────────────────
 // ── black / red palette ──────────────────────────────────────
@@ -165,8 +179,7 @@ const telemetrySVG = (t) => `${svgOpen(180, t)}
 <polyline class="draw" points="${ACTIVITY_PULSE_POINTS}" fill="none" stroke="${t.acc}" stroke-width="1.5"/>
 <circle class="ping" cx="${ACTIVITY_PULSE_END.x}" cy="${ACTIVITY_PULSE_END.y}" r="6" fill="none" stroke="${t.acc}" stroke-width="1"/>
 <circle cx="${ACTIVITY_PULSE_END.x}" cy="${ACTIVITY_PULSE_END.y}" r="2.5" fill="${t.acc}"/>
-<text x="540" y="164" font-size="9" fill="${t.mut}" font-weight="400" text-anchor="start">00:01</text>
-<text x="860" y="164" font-size="9" fill="${t.mut}" font-weight="400" text-anchor="end">24:00</text>
+${ACTIVITY_PULSE_TICKS.map((tk) => `<text x="${tk.x}" y="164" font-size="7" fill="${t.mut}" font-weight="400" text-anchor="${tk.anchor}">${tk.label}</text>`).join("\n")}
 </svg>
 `;
 
