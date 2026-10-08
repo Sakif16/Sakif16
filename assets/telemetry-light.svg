@@ -18,17 +18,17 @@
 </style>
 <text x="10" y="26" font-size="12" fill="#C1121F" font-weight="600" text-anchor="start" letter-spacing="3" class="fade">04 — telemetry</text><line x1="150.8" y1="21" x2="870" y2="21" stroke="#d0d7de" stroke-width="1"/>
 <text x="30" y="92" font-size="10" fill="#57606a" font-weight="400" text-anchor="start" letter-spacing="1.2">contributions</text>
-<text x="30" y="128" font-size="27" fill="#0d1117" font-weight="700" text-anchor="start">409+</text>
+<text x="30" y="128" font-size="27" fill="#0d1117" font-weight="700" text-anchor="start">412+</text>
 <text x="30" y="152" font-size="10" fill="#57606a" font-weight="400" text-anchor="start">since jan 2023</text>
 <text x="155" y="92" font-size="10" fill="#57606a" font-weight="400" text-anchor="start" letter-spacing="1.2">repositories</text>
 <text x="155" y="128" font-size="27" fill="#0d1117" font-weight="700" text-anchor="start">16</text>
 <text x="155" y="152" font-size="10" fill="#57606a" font-weight="400" text-anchor="start">public</text>
 <text x="280" y="92" font-size="10" fill="#57606a" font-weight="400" text-anchor="start" letter-spacing="1.2">followers</text>
-<text x="280" y="128" font-size="27" fill="#0d1117" font-weight="700" text-anchor="start">15</text>
+<text x="280" y="128" font-size="27" fill="#0d1117" font-weight="700" text-anchor="start">18</text>
 <text x="280" y="152" font-size="10" fill="#57606a" font-weight="400" text-anchor="start">and counting</text>
 <text x="405" y="92" font-size="10" fill="#57606a" font-weight="400" text-anchor="start" letter-spacing="1.2">streak</text>
 <g transform="translate(384 104)"><g class="flame"><path d="M8 0C12.4 4.4 15 8 15 13C15 18.4 11.9 24 8 24C4.1 24 1 18.4 1 13C1 9.6 2.6 7.2 4.2 5.2C4.4 7.6 5.4 9 7.4 9.6C6.9 6.4 7 2.8 8 0Z" fill="#C1121F"/><path class="flame-core" d="M8 11.4C10.4 14.4 11.2 16.2 11.2 18C11.2 20.6 9.8 22.2 8 22.2C6.2 22.2 4.8 20.6 4.8 18C4.8 15.8 6.2 13.4 8 11.4Z" fill="#F76707"/></g></g>
-<text x="405" y="128" font-size="27" fill="#0d1117" font-weight="700" text-anchor="start">8</text>
+<text x="405" y="128" font-size="27" fill="#0d1117" font-weight="700" text-anchor="start">9</text>
 <text x="405" y="152" font-size="10" fill="#57606a" font-weight="400" text-anchor="start">days in a row</text>
 <text x="540" y="92" font-size="11" fill="#57606a" font-weight="400" text-anchor="start" letter-spacing="2">activity pulse · bst</text>
 <polyline class="draw" points="540,98 586.7,98 600,150 706.7,150 720,129.2 733.3,129.2 746.7,118.8 773.3,118.8 786.7,134.4 800,134.4 813.3,111 826.7,111 840,98 860,98" fill="none" stroke="#C1121F" stroke-width="1.5"/>
