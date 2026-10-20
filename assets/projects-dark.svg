@@ -7,8 +7,8 @@
 @keyframes blink{50%{opacity:0}}
 .ping{transform-box:fill-box;transform-origin:center;animation:ping 2.2s ease-out infinite}
 @keyframes ping{0%{transform:scale(.55);opacity:.8}100%{transform:scale(1.7);opacity:0}}
-.draw{stroke-dasharray:700;animation:draw 2.4s ease both .3s}
-@keyframes draw{from{stroke-dashoffset:700}to{stroke-dashoffset:0}}
+.draw{stroke-dasharray:1;animation:draw 2.4s ease both .3s}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
 .grow{transform-box:fill-box;transform-origin:left;animation:grow 1.4s ease both .4s}
 @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 .flame{transform-box:fill-box;transform-origin:50% 100%;animation:flicker 1.5s ease-in-out infinite}
