@@ -166,6 +166,11 @@ const FLAME_CORE = "M8 11.4C10.4 14.4 11.2 16.2 11.2 18C11.2 20.6 9.8 22.2 8 22.
 
 // ── templates ───────────────────────────────────────────────────
 // ── black / red palette ──────────────────────────────────────
+// NOTE on .draw: the line-draw animation is normalised with pathLength="1" on
+// each polyline (see telemetrySVG / activitySVG). A fixed dasharray (the old
+// 700) is shorter than a jagged contribution line, which left everything past
+// 700px as an invisible gap — the "faded" tail. With pathLength="1" the dash
+// always covers the full line, whatever its real length.
 const STYLE = `<style>
 .fade{animation:fade .9s ease both}
 @keyframes fade{from{opacity:0}}
@@ -173,8 +178,8 @@ const STYLE = `<style>
 @keyframes blink{50%{opacity:0}}
 .ping{transform-box:fill-box;transform-origin:center;animation:ping 2.2s ease-out infinite}
 @keyframes ping{0%{transform:scale(.55);opacity:.8}100%{transform:scale(1.7);opacity:0}}
-.draw{stroke-dasharray:700;animation:draw 2.4s ease both .3s}
-@keyframes draw{from{stroke-dashoffset:700}to{stroke-dashoffset:0}}
+.draw{stroke-dasharray:1;animation:draw 2.4s ease both .3s}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
 .grow{transform-box:fill-box;transform-origin:left;animation:grow 1.4s ease both .4s}
 @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 .flame{transform-box:fill-box;transform-origin:50% 100%;animation:flicker 1.5s ease-in-out infinite}
@@ -263,7 +268,7 @@ const telemetrySVG = (t) => `${svgOpen(180, t)}
 <text x="10" y="26" font-size="12" fill="${t.acc}" font-weight="600" text-anchor="start" letter-spacing="3" class="fade">04 — telemetry</text><line x1="150.8" y1="21" x2="870" y2="21" stroke="${t.line}" stroke-width="1"/>
 ${statBlock(t)}
 <text x="540" y="92" font-size="11" fill="${t.mut}" font-weight="400" text-anchor="start" letter-spacing="2">activity pulse · bst</text>
-<polyline class="draw" points="${ACTIVITY_PULSE_POINTS}" fill="none" stroke="${t.acc}" stroke-width="1.5"/>
+<polyline class="draw" pathLength="1" points="${ACTIVITY_PULSE_POINTS}" fill="none" stroke="${t.acc}" stroke-width="1.5"/>
 <circle class="ping" cx="${ACTIVITY_PULSE_END.x}" cy="${ACTIVITY_PULSE_END.y}" r="6" fill="none" stroke="${t.acc}" stroke-width="1"/>
 <circle cx="${ACTIVITY_PULSE_END.x}" cy="${ACTIVITY_PULSE_END.y}" r="2.5" fill="${t.acc}"/>
 ${ACTIVITY_PULSE_TICKS.map((tk) => `<text x="${tk.x}" y="164" font-size="7" fill="${t.mut}" font-weight="400" text-anchor="${tk.anchor}">${tk.label}</text>`).join("\n")}
@@ -275,7 +280,7 @@ const activitySVG = (t) => `${svgOpen(210, t)}
 <text x="10" y="26" font-size="12" fill="${t.acc}" font-weight="600" text-anchor="start" letter-spacing="3" class="fade">contribution telemetry</text><line x1="208.4" y1="21" x2="870" y2="21" stroke="${t.line}" stroke-width="1"/>
 ${t.gridlines}
 <path d="${t.area}" fill="url(#area)"/>
-<polyline class="draw" points="${t.points}" fill="none" stroke="${t.acc}" stroke-width="1.5"/>
+<polyline class="draw" pathLength="1" points="${t.points}" fill="none" stroke="${t.acc}" stroke-width="1.5"/>
 <circle class="ping" cx="${t.px}" cy="${t.py}" r="6" fill="none" stroke="${t.acc}" stroke-width="1"/>
 <circle cx="${t.px}" cy="${t.py}" r="2.5" fill="${t.acc}"/>
 ${t.months}
