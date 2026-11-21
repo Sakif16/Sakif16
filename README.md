@@ -12,7 +12,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg">
-  <img src="assets/header-dark.svg" width="100%" alt="sakib muhtasim — sakif16">
+  <img src="assets/header-dark.svg" width="100%" alt="sakib muhtasim — devops, machine learning, full-stack">
 </picture>
 
 <p align="center">
@@ -44,7 +44,7 @@
 <!-- add one <a> block per project card; keep width="49%" for a 2-up row, or 32% for 3-up -->
 <p align="center">
   <a href="https://github.com/Sakif16/nobojatra"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/proj-nobojatra-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/proj-nobojatra-light.svg"><img src="assets/proj-nobojatra-dark.svg" width="49%" alt="nobojatra"></picture></a>
-  <a href="https://github.com/Sakif16/snitch"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/proj-snitch-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/proj-snitch-light.svg"><img src="assets/proj-snitch-dark.svg" width="49%" alt="snitch"></picture></a>
+  <a href="https://github.com/Sakif16/traffic-punk"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/proj-traffic-punk-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/proj-traffic-punk-light.svg"><img src="assets/proj-traffic-punk-dark.svg" width="49%" alt="traffic punk"></picture></a>
 </p>
 
 <picture>

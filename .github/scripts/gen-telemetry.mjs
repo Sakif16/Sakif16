@@ -22,12 +22,10 @@ const PROJECTS = [
     href: "https://github.com/Sakif16/nobojatra",
     d1: "smart travel planning platform",
     d2: "next.js · typescript · mongodb" },
-  { key: "snitch", title: "snitch", lang: "typescript", star: "Sakif16/snitch",
-    href: "https://github.com/Sakif16/snitch",
-    // TODO: I couldn't verify this repo's details publicly — fill in the
-    // real one-line description and tech stack below.
-    d1: "TODO — one line describing snitch",
-    d2: "TODO — tech · stack · used" },
+  { key: "traffic-punk", title: "traffic punk", lang: "javascript", star: "Sakif16/traffic-punk",
+    href: "https://github.com/Sakif16/traffic-punk",
+    d1: "real-time live road streaming platform",
+    d2: "next.js · peerjs · onnxruntime" },
   // more from sakif16.github.io/projects.html you could add:
   // { key: "study-buddy", title: "study buddy", lang: "typescript", star: "Sakif16/study-buddy",
   //   href: "https://github.com/Sakif16/study-buddy",
